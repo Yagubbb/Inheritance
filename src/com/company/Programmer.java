@@ -1,17 +1,17 @@
 package com.company;
 
-public class Programmer extends Job {
-    Person person;
+public class Programmer extends Person {
+    Job job;
     Computer comp;
     University university;
 
-    public Programmer(Person person,int workHours, int salary, String workPlace, String skills,Computer comp,University  university) {
-        super(workHours, salary, workPlace, skills);
-        this.person = person;
-        this.comp = comp;
+    public Programmer(String name, String surname, int age,Job job,Computer comp,University university) {
+        super(name, surname, age);
+        this.job = job;
+        this.comp =comp;
         this.university = university;
-
     }
+
 
     public void setComp(Computer comp) {
         this.comp = comp;
@@ -21,8 +21,8 @@ public class Programmer extends Job {
         return comp;
     }
 
-    public Person getPerson() {
-        return person;
+    public Job getJob() {
+        return job;
     }
 
     public University getUniversity() {
@@ -32,17 +32,15 @@ public class Programmer extends Job {
 
 
     public void about(){
-        System.out.println("Full name: " + person.getName() +" " + person.getSurname());
-        System.out.println("Job: " + getName() );
-        System.out.println("Work hours and place: " + Integer.toString(getWorkHours()) + " " +  getWorkPlace());
-        System.out.println("Salary: " + getSalary());
-        System.out.println("Skills: " + getSkills());
+        System.out.println("Full name: " + getName() +" " + getSurname());
+        System.out.println("Job: Programmer" );
+        System.out.println("Work hours and place: " + Integer.toString(job.getWorkHours()) + " in " +  job.getWorkPlace());
+        System.out.println("Salary: " + job.getSalary());
+        System.out.println("Skills: " + job.getSkills());
         System.out.println("Finished University: " + university.getName());
         System.out.println();
 
     }
-    public String getName(){
-        return "Programmer";
-    }
+
 
 }

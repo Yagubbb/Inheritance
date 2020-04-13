@@ -49,7 +49,7 @@ public class University {
     public void about(){
         System.out.println("Name: " + getName());
         System.out.println("Faculties: "  + faculties);
-        System.out.println("Education year(without foundation)" + getEducationYear());
+        System.out.println("Education year(without foundation): " + getEducationYear());
         System.out.println("Payment(paid): " + getPayment());
         System.out.println("");
         System.out.println("");

@@ -43,4 +43,6 @@ public class Job {
     public void setSkill(String skills) {
         this.skills = skills;
     }
+
+
 }
